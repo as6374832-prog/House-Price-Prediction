@@ -1,0 +1,11 @@
+
+.venv/
+__pycache__/
+*.py[cod]
+.DS_Store
+.streamlit/secrets.toml
+
+# Generated dataset and trained model
+california_housing.csv
+house_price_model.joblib
+
