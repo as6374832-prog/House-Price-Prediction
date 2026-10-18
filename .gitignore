@@ -7,6 +7,6 @@ __pycache__/
 
 # Generated dataset and trained model
 california_housing.csv
-house_price_model.joblib
 
-house_price_model.joblib
+
+
