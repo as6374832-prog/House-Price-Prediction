@@ -19,7 +19,10 @@ X_train, X_test, y_train, y_test = train_test_split(
 
 # 4. Train the model
 model = RandomForestRegressor(
-    n_estimators=100, random_state=42, n_jobs=-1
+    n_estimators=20,
+    max_depth=12,
+    random_state=42,
+    n_jobs=-1
 )
 model.fit(X_train, y_train)
 
