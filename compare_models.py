@@ -4,6 +4,8 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_absolute_error, r2_score
+from sklearn.model_selection import cross_val_score
+from sklearn.base import clone
 
 # 1. Load the dataset
 df = pd.read_csv("california_housing.csv")
@@ -36,3 +38,17 @@ for name, model in models.items():
     print(f"\n{name}")
     print(f"MAE: {mae:.3f} (about ${mae * 100000:,.0f})")
     print(f"R²:  {r2:.3f}")
+ # 6. Evaluate using 5-fold cross-validation
+    cv_model = clone(model)
+
+    cv_scores = cross_val_score(
+        cv_model,
+        X,
+        y,
+        cv=5,
+        scoring="r2",
+        n_jobs=-1
+    )
+
+    print(f"5-Fold CV R²: {cv_scores.mean():.3f}")
+    print(f"CV Std Dev:   {cv_scores.std():.3f}")
