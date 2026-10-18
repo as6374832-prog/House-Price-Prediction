@@ -5,7 +5,7 @@ A machine learning project that predicts median house values for California cens
 ## Project Overview
 ## Application Screenshot
 
-![California House Value Predictor](house-price-predictor.png)
+![California House Value Predictor](image.png)
 This project explores housing data, trains regression models, compares their performance, and provides an interactive prediction interface built with Streamlit.
 
 **Important:** The dataset comes from the 1990 U.S. Census and represents census areas rather than individual properties. It is intended for educational use, not current property valuation.
