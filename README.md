@@ -66,3 +66,39 @@ California Housing dataset provided through scikit-learn. The target, `MedHouseV
 ## Disclaimer
 
 Predictions are educational estimates based on historical data. They should not be used for financial decisions or current real estate valuations.
+## Model Performance
+
+The Random Forest regression model was evaluated using a
+held-out test set.
+
+- **Mean Absolute Error (MAE):** 0.349
+- **R² Score:** 0.790
+
+The model uses historical California housing data to estimate
+median house values for census areas. These estimates are
+educational and should not be treated as current property valuations.
+
+## Key Features
+
+- Interactive predictions using Streamlit
+- Random Forest regression
+- Feature-importance visualization
+- Model performance metrics
+- Data analysis using Python and pandas
+
+## Tech Stack
+
+Python, pandas, scikit-learn, Streamlit, Matplotlib, Git, and GitHub.
+
+## Live Demo
+
+[Try the House Value Predictor](https://house-price-prediction-p5ae6gopjniztljpkr3rvn.streamlit.app/)
+
+## GitHub Repository
+
+[View Source Code](https://github.com/as6374832-prog/House-Price-Prediction)
+
+## Disclaimer
+
+Predictions are educational estimates based on historical data. They should not be used for financial decisions or current real estate valuations.
+
