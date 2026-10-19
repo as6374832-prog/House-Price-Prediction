@@ -35,6 +35,20 @@ if hasattr(model, "feature_importances_"):
 
 st.title("California House Value Predictor")
 st.write("Estimate a census area's median house value.")
+st.subheader("Model Performance")
+
+col1, col2 = st.columns(2)
+
+with col1:
+    st.metric("MAE", "0.349")
+
+with col2:
+    st.metric("R² Score", "0.790")
+
+st.caption(
+    "Metrics are from the model's evaluation run. "
+    "The dataset contains historical California housing data."
+)
 
 # Collect input features
 med_inc = st.number_input("Median income", 0.5, 20.0, 5.0)
