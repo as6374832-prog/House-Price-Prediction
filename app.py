@@ -5,6 +5,33 @@ import joblib
 
 # Load the saved model
 model = joblib.load("house_price_model.joblib")
+# Display feature importance
+st.subheader("What influences house values?")
+
+if hasattr(model, "feature_importances_"):
+    features = [
+        "Median income",
+        "Median house age",
+        "Average rooms",
+        "Average bedrooms",
+        "Area population",
+        "Average occupancy",
+        "Latitude",
+        "Longitude",
+    ]
+
+    importance = pd.DataFrame({
+        "Feature": features,
+        "Importance": model.feature_importances_,
+    })
+
+    importance = importance.sort_values(
+        "Importance", ascending=True
+    )
+
+    st.bar_chart(
+        importance.set_index("Feature")["Importance"]
+    )
 
 st.title("California House Value Predictor")
 st.write("Estimate a census area's median house value.")
